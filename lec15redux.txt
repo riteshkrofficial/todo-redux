@@ -1,0 +1,75 @@
+
+Here we will be studying about the redux library and its usage
+
+In context api we have studied that put all the required things in center and whenever we need it we take it from
+hooks that is we made hooks "use" and whenever we need we take it take through hooks.
+In contex api data flow is not as good as the flux or redux because here everything need to be specified like spread operator and all
+along with mentioning array or object but in Flux its quiet easy to maintain data flow.
+
+FLUX=>Used in facebook is also dealing the same state management and data flow problem.
+Same as context api it also has a central store that is data present globaly and taken easily. 
+ =>It has additional features that is it (Flux) follows a unidirectional (((data flow )))pattern, which means that data flows in one direction 
+ within the application. This makes it easier to understand and manage how data changes propagate throughout the system.
+
+
+ redux => It is defined as an independent state management library used in react ,vue etc...
+ it is a better version of flux.
+ it is a predictable app container for js app.
+
+ since redux is an independent library therefore for in react use it is react redux.
+ 
+ Earlier redux has many setup and all then for making it more better without much more need of setup 
+ redux-toolkit was invented.
+
+ redux-toolkit has all the functinality is prebuilt and easy.
+
+ => Concepts in redux and redux-toolkit
+
+ 1.store: From where we took all the things from single source of truth(Global store).
+
+
+ 2.reducer:It is used to manipulate or change in store also in which store (store also has mini store inside it ).
+ They are object.
+
+
+
+ 3.useSelector=> Method used for selecting value from the store.
+
+
+ 4.useDispatch=> Method used for sending the value.
+
+
+note imp inside a project =>In context api we were doing the declaration of the function.
+But in redux toolkit we not only do the declaration of the function but also do define the function too.
+     OR (CHAT GPT WAY)
+****"In the Context API, we declare the context and its provider, where we can provide functions or states
+to share among components. In Redux Toolkit, we not only declare but also define action creators, reducers,
+and the store itself. Redux Toolkit simplifies this process by providing utilities like createSlice to define
+actions and reducers together."     
+
+
+==>> NOW I AM WRITING THE STEP FOR SETING UP THE redux:
+
+Step1: First crete a file store.js and configure it. (In the project it is in a folder app).
+
+step2:Create reducer (named as slice here){from this project file name is fetaure->todo->todoSlice.js}
+for reducer ,crete a folder feature inside it create a feature folder name todo and then inside it a file todoSlice.js.
+after this atleast one method is needed to create slice(in this we have given two method)
+
+
+
+
+Summary about the project: 
+In redux mainly always there  is only one store  that is called as single source of truth.
+In this we need a configure store  inside it an object is there .
+
+then we have to introduce reducer in store becoz whenever the value in store will update it automatically do not take that value and it need awarness about the data
+for that reducer need to be specified.
+
+For all the reducer we go in features(called as slice in redux) 
+for making slice there is a method that is {createSlice} and we need 3 things majorily to create this method that is =>
+name
+intialState (initially the things available )
+reducers are object with key value and function in it.
+
+
